@@ -1,0 +1,11 @@
+/nbproject/
+/app/Runtime/
+/www/Uploads/
+/app/Uploads/
+/.idea
+/js-src
+/.vscode
+/vendor
+/package/
+.env
+/lara/vendor/
