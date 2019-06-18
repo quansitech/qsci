@@ -24,7 +24,7 @@
    立即显示到流水线的执行日志。
    
 ### 效果图
-<img src="" />
+<img src="https://github.com/tiderjian/qsci/blob/master/blob/ex.png" />
 
 ### 安装
 ```php
