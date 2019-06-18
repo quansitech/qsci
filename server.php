@@ -6,12 +6,13 @@ use QSCI\TaskProviders\ProviderLoad;
 
 include "autoload.php";
 
-const TOKEN = '2IGQLVDTR8D3NAE2';
+const TOKEN = '设置你自己的token';
 
 const ERROR_PREFIX = "ERROR*****";
 const ERROR_SUFFIX= "*****ERROR";
+const PORT = 1802;
 
-$http = new swoole_http_server("0.0.0.0", 1802);
+$http = new swoole_http_server("0.0.0.0", PORT);
 
 $http->set([
     //关闭内置协程
