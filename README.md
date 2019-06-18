@@ -124,5 +124,15 @@ git clone https://github.com/tiderjian/qsci.git
     }, 'clear runtime failed!', 'clear runtime finished!'));
     ```
     
+ ### 配置云效
+ 云效的流水线配置方法请自行阅读阿里云的学习文档，这里只给出云效的自定义脚本代码
+ ```blade
+curl -d "post参数" "http://url地址?token=你设置的token&action=example" | tee test.log
+st=`grep -c "ERROR\*\*\*\*\*.*\*\*\*\*\*ERROR" test.log`
+if [ $st -gt 0 ]; then
+    exit 1
+fi
+```
+    
     ### lincense
     [MIT License](https://github.com/tiderjian/qsci/blob/master/LICENSE.MIT) AND [996ICU License](https://github.com/tiderjian/qsci/blob/master/LICENSE.996ICU)
