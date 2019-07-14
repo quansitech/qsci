@@ -1,7 +1,6 @@
 <?php
 namespace QSCI;
 
-use Swoole\Process;
 use Swoole\Server;
 
 class Pool
@@ -42,7 +41,7 @@ class Pool
             foreach($managers as $manager){
                 $workingTasks = $manager->getWorkingTasks();
                 array_walk($workingTasks, function($val, $key){
-                    Process::kill($key);
+                    exec(__DIR__ . '/killtree.sh ' . $key);
                 });
 
                 if($serv->exist($manager->getFd())){
