@@ -41,7 +41,7 @@ class Pool
             foreach($managers as $manager){
                 $workingTasks = $manager->getWorkingTasks();
                 array_walk($workingTasks, function($val, $key){
-                    exec(__DIR__ . '/killtree.sh ' . $key);
+                    exec('/bin/sh ' . __DIR__ . '/killtree.sh ' . $key);
                 });
 
                 if($serv->exist($manager->getFd())){
